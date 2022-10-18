@@ -1,1 +1,102 @@
-<!-- Ready -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" type="text/css" href="scss/main.scss">
+ <title>Some random page</title>
+</head>
+
+<body>
+ <main class="container">
+<!-- HERO SECTION -->
+   <header id="hero" class="hero">
+<!-- NAVIGATION -->
+    <nav class="nav">
+<!-- HAMBURGER / DROPDOWN -->
+     <div class="nav__dropdown--toggle">
+      <input id="nav__burger nav__burger--active" type="checkbox"/>
+      <label for="nav__burger nav__burger--active">Dropdown</label>
+      <span class="nav__burger--top-line"></span>
+      <span class="nav__burger--mid-line"></span>
+      <span class="nav__burger--btm-line"></span>
+<!-- MENU -->
+      <ul class="nav__list nav__list--dropdown">
+       <li class="nav__item nav__item--dropdown"><a class="nav__link nav__link--dropdown" href="#">Hem</a></li>
+       <li class="nav__item nav__item--dropdown"><a class="nav__link nav__link--dropdown" href="#">Kontakt</a></li>
+       <li class="nav__item nav__item--dropdown"><a class="nav__link nav__link--dropdown" href="#">Om</a></li>
+      </ul>
+     </div>
+    </nav>
+<!-- HERO CONTENT -->
+    <aside class="hero__content">
+     <span class="hero__text hero__heading">Welcome to nature</span>
+     <span class="hero__text">A journey through time and sheep</span>
+     <span class="hero__text">To see how ...cotton ... is mage, made I mean...</span>
+    </aside>
+<!-- NEXT SECTION LINK -->
+    <a class="btn btn--goto-about" href="#om"><img class="btn__icon hero__btn__icon" src="../assets/arrow-white.png" alt="Tryck för att gå till Kontakt"></a> 
+   </header> 
+<!-- ABOUT SECTION -->
+   <section id="about" class="about">
+    <span class="about__title">Träffa laget</span>
+<!-- STAFF -->
+    <article class="about__person">
+     <span class="about__name">Rakib</span>
+     <img class="about__img"src="../assets/profiles/Rakib_Square.png" alt="Profilbild på Rakib"/>
+     <blockquote class="about__quote about__quote--rakib"></blockquote>
+    </article>
+    <article class="about__person">
+     <span class="about__name">Alexandra</span>
+     <img class="about__img" src="../assets/profiles/Alexandra_Square.png" alt="Profilbild på Alexandra med en hund "/>
+     <blockquote class="about__quote about__quote--alexandra"></blockquote>
+    </article>
+    <article class="about__person">
+     <span class="about__name">Lasse</span>
+     <img class="about__img" src="../assets/profiles/NoPerson_Square.png" alt="Lasse saknar profilbild" />
+     <blockquote class="about__quote about__quote--lasse"></blockquote>
+    </article>
+    <article class="about__person">
+     <span class="about__name">Sebastian</span>
+     <img class="about__img" src="../assets/profiles/Sebastian_Square.png" alt="Profilbild på Sebastian" />
+     <blockquote class="about__quote about__quote--sebastian"></blockquote>
+    </article>
+<!-- NEXT SECTION LINK -->
+    <a class="btn btn--goto-contact" href="#contact"><img class="btn__icon" src="../assets/arrow-icon.png" alt="Tryck för att gå till kontakt"></a>
+   </section>
+<!-- FOOTER / CONTACT SECTION -->
+   <footer id="contact" class="contact">
+
+    <address>
+     <div class="contact__category contact__address">
+      <span>Tegel Consulting AB</span>
+      <span>Agatvägen 18</span>
+      <span>168 60 Bromma</span>
+     </div>
+     <div class="contact__category contact__digits">
+      <span>info at tegelconsulting.se</span>
+      <span>070-123 456 78</span>
+     </div>
+     <div class="contact__category contact__social-media">
+      <a href="https://instagram.com"><img src="../assets/icons/instagram.png" alt="Instagram logo">Instagram</a>
+      <a href="https://twitter.com"><img src="../assets/icons/twitter.png" alt="Twitter logo">Twitter</a>
+      <a href="https://facebook.com"><img src="../assets/icons/facebook.png" alt="Facebook logo">Facebook</a>
+     </div>
+    </address>
+     
+    <address>
+     <span></span>
+     <br>
+    
+    </address>
+
+    <address>
+     <span>Instagram</span>
+     <span>Twitter</span>
+     <span>Facebook</span>
+    </address>
+    
+   </footer>
+  </main>
+ </body>
+</html>

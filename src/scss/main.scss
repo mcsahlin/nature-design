@@ -1,0 +1,124 @@
+@using "reset";
+@using "variables" as v;
+@using "mixins" as m;
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+
+
+
+
+.container {
+  width: 100%;
+
+  section {
+    @include flex-column--justify(space-around)
+  }
+
+  #hero {
+    height: 100vh;
+    width: 100vw;
+    background-image: $path--bg-img;
+    background-size: cover;
+    background-position: center;
+    @include flex-column--justify(space-between);
+
+    header {
+
+      height: 8vh;
+      width: 100vw;
+
+      nav {
+        height: 100%;
+        background-color: blue;
+        ;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        ul,
+        label {
+          display: none;
+        }
+
+        input {
+          position: relative;
+          top: 15px;
+          right: 15px;
+        }
+      }
+
+
+
+
+
+
+    }
+
+    article {
+      @include flex-column--justify(space-around);
+      height: 35vh;
+      width: 80vw;
+      color: $primary;
+      text-align: center;
+      gap: 15px;
+
+      h1 {
+        @include font--size-weight(30px, bold);
+      }
+
+      p {
+        @include font--size-weight(24px, 200);
+      }
+    }
+
+    .arrow--down {
+
+      width: 8vw;
+      margin-bottom: 100%;
+
+    }
+  }
+
+  #om {
+    height: 100vh;
+    width: 100vw;
+    @include flex-column--justify(space-between);
+    gap: 50px;
+
+    article {
+      @include flex-column--justify(space-around);
+      gap: 10px;
+
+      img {
+        border-radius: 50%;
+        width: 66vw;
+      }
+
+      blockquote {
+        @include quotebox;
+
+        span {
+          content: "\201D";
+          color: black;
+          font-size: xx-large;
+        }
+      }
+    }
+  }
+}
