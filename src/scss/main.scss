@@ -1,123 +1,134 @@
-@using "reset";
-@using "variables" as v;
-@using "mixins" as m;
+@use "variables" as v;
+@use "mixins" as m;
 
-
-
-body {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-
-  h1 {
-    margin: 0;
+.nav {
+  height: 7vh;
+  width: 100vw;
+  background-color: v.$color_primary_tint;
+  display: flex;
+  justify-content: flex-end;
+  @include m.desktop {
+    background-color: v.$color_primary_tint;
   }
+  ul,
+      label {
+        display: none;
+      }
 
-  p {
-    margin: 0;
+      input {
+        position: relative;
+        top: 15px;
+        right: 15px;
+      }
+}
+.hero {
+  @include m.d-flex--jus(space-between);
+  height: 100vh;
+  width: 100vw;
+  background-image: v.$url_bg;
+  background-size: cover;
+  background-position: center;
+  &__content {
+    @include m.d-flex--jus(space-around);
+    height: 35vh;
+    padding: 0 20px;
+    color: v.$color_primary;
+    text-align: center;
+  }
+  &__heading {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  &__text {
+    font-size: 1.7em;
+  }
+  .btn-next {
+    margin-bottom: 5vh;
+    height: 30px;
+    width: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/arrow-white.png);
   }
 }
-
-
-
-
-
 .container {
-  width: 100%;
-
-  section {
-    @include flex-column--justify(space-around)
-  }
-
-  #hero {
-    height: 100vh;
-    width: 100vw;
-    background-image: $path--bg-img;
-    background-size: cover;
-    background-position: center;
-    @include flex-column--justify(space-between);
-
-    header {
-
-      height: 8vh;
-      width: 100vw;
-
-      nav {
-        height: 100%;
-        background-color: blue;
-        ;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-
-        ul,
-        label {
-          display: none;
-        }
-
-        input {
-          position: relative;
-          top: 15px;
-          right: 15px;
-        }
-      }
-
-
-
-
-
-
-    }
-
-    article {
-      @include flex-column--justify(space-around);
-      height: 35vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: v.$color_secondary;
+    &__title {
+      font-size: 2.2em;
+      margin: 50 0 20px 0;    }
+    &__person {
       width: 80vw;
-      color: $primary;
-      text-align: center;
-      gap: 15px;
-
-      h1 {
-        @include font--size-weight(30px, bold);
+    }
+    &__name {
+      font-size: 0.6em;
+      margin-top: 50px;
+    }
+    &__img {
+      width: 66vw;
+      border-radius: 50%;
+      box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.55);
+      margin: 20px 0;
+    }
+    &__quote {
+      background-color: #D3D3D3;
+      padding: 40px;
+      font-size: 16px;
+      font-weight: 100;
+      text-align: left;
+      border-radius: 7;
+      &:last-of-type {
+        margin-bottom: 20px;
       }
-
-      p {
-        @include font--size-weight(24px, 200);
+      span {
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        content: url(../../assets/quotation-mark.png);
       }
     }
-
-    .arrow--down {
-
-      width: 8vw;
-      margin-bottom: 100%;
-
-    }
+    .btn-next {
+      margin-bottom: 5vh;
+      &__icon {
+        width: 30px;
+      }
+    } 
   }
-
-  #om {
-    height: 100vh;
+  .contact {
+    background: black;
+    padding: 60px;
     width: 100vw;
-    @include flex-column--justify(space-between);
-    gap: 50px;
-
-    article {
-      @include flex-column--justify(space-around);
-      gap: 10px;
-
-      img {
-        border-radius: 50%;
-        width: 66vw;
+    height: 70vh;
+    color: v.$color-primary;
+    font-size: 1.6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__street, &__digits, &__social-media {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+    &__social-media {
+      a {
+        color: inherit;
+        text-decoration: inherit;
+        margin-bottom: 5px;
       }
-
-      blockquote {
-        @include quotebox;
-
-        span {
-          content: "\201D";
-          color: black;
-          font-size: xx-large;
-        }
+      img {
+        width: 1em;
+        margin-right: 20px;
       }
     }
   }

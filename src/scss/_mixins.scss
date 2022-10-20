@@ -1,7 +1,33 @@
+@use "variables" as v;
 @mixin radius($value) {
  border-radius: $value;
 }
+@mixin font--size-weight($fz, $fw) {
+ font-size: $fz;
+ font-weight: $fw;
+}
+@mixin d-flex--center {
+ display: flex;
+ justify-content: center;
+ align-items: center;
 
+ // @media screen and (min: $breakpoint--medium){
+
+ // }
+}
+
+@mixin d-flex--jus($space) {
+ display: flex;
+ flex-direction: column;
+ justify-content: $space;
+ align-items: center;
+}
+@mixin quotebox {
+ background-color: #D3D3D3;
+ padding: 100px;
+ width: 60vw;
+ border-radius: 15px;
+}
 // Färger
 
 
@@ -34,3 +60,18 @@
 // 
 // OM
 // Section, Article, h2, img, blockquote x4
+
+
+@mixin navbar($host) {
+ height: 7vh;
+ width: 100vw;
+ position: relative;
+ display: flex;
+ justify-content: flex-end;
+}
+
+@mixin desktop {
+ @media screen and (min-width: v.$breakpoint_desktop){
+  @content;
+ };
+}
