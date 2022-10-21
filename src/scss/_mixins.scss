@@ -1,6 +1,4 @@
 @use "variables" as v;
-
-// Media Queries
 @mixin desktop {
  @media screen and (min-width: v.$breakpoint_desktop){
   @content;
@@ -152,7 +150,7 @@
   .menu__box {
    display: flex;
    flex-direction: row;
-   font-size: 20px;
+   font-size: 30px;
    gap: 15px;
    margin-right: 50px;
    align-items: center;
