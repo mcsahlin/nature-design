@@ -1,97 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="scss/_reset.scss"/>
-        <link rel="stylesheet" href="scss/main.scss"/>
-        <title>Some random page</title>
-    </head>
-
-    <body>
-        <!-- HERO SECTION -->
-        <nav>
-            
-        </nav>
-        <header id="home" class="hero">
-            <!-- NAVIGATION -->
-            <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox" />
-                <label for="menu__toggle" class="menu__btn" >
-                    <span></span>
-                </label>
-                <ul class="menu__box">
-                  <li><a class="menu__item" href="#home">Hem</a></li>
-                  <li><a class="menu__item" href="#about">Om</a></li>
-                  <li><a class="menu__item" href="#contact">Kontakt</a></li>
-                </ul>
-              </div>
-            
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/_reset.scss" />
+    <link rel="stylesheet" href="scss/main.scss" />
+    <title>Some random page</title>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <header id="home" class="hero">
+        <!-- NAVIGATION -->
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox">
+            <label for="menu__toggle" class="menu__btn">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li><a class="menu__item" href="#home">Hem</a></li>
+                <li><a class="menu__item" href="#about">Om</a></li>
+                <li><a class="menu__item" href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
         <!-- HERO CONTENT -->
-            <article class="hero__content">
+        <article class="hero__content">
             <h1 class="hero__heading">Welcome to nature</h1>
             <span class="hero__text">A journey through time and sheep</span>
             <span class="hero__text">To see how ...cotton ... is mage, made I mean...</span>
-            </article>
+        </article>
         <!-- NEXT SECTION LINK -->
-            <a title="Next section"class="btn-next btn-next--white" href="#about"></a> 
-        </header> 
-
-        <!-- MAIN -->
-        <main class="container">
-
-            <!-- ABOUT SECTION -->
-            <section id="about" class="about">
-                <h2 class="about__title">Träffa laget</h2>
-
-
+        <a title="Next section" class="btn-next btn-next--white" href="#about"></a>
+    </header>
+    <!-- MAIN -->
+    <main class="container">
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about">
+            <h2 class="about__title">Träffa laget</h2>
             <!-- STAFF -->
-                <article class="about__person">
+            <article class="about__person">
                 <h3 class="about__name">Rakib</h3>
-                <img class="about__img"src="../assets/profiles/Rakib_Square.png" alt="Profilbild på Rakib"/>
-                <blockquote class="about__quote about__quote--rakib"><span></span> Rakib är vår vassaste node-utvecklare och håller ständigt et öga på nya tekniker</blockquote>
-                </article>
-
-
-                <article class="about__person">
+                <img class="about__img" src="../assets/profiles/Rakib_Square.png" alt="Profilbild på Rakib" />
+                <blockquote class="about__quote about__quote--rakib"><span></span> Rakib är vår vassaste node-utvecklare
+                    och håller ständigt et öga på nya tekniker</blockquote>
+            </article>
+            <article class="about__person">
                 <h3 class="about__name">Alexandra</h3>
-                <img class="about__img" src="../assets/profiles/Alexandra_Square.png" alt="Profilbild på Alexandra med en hund "/>
-                <blockquote class="about__quote about__quote--alexandra"><span></span> Alexandra håller reda på alla överallt och ser till att det flyter</blockquote>
-                </article>
-
-                <article class="about__person">
+                <img class="about__img" src="../assets/profiles/Alexandra_Square.png"
+                    alt="Profilbild på Alexandra med en hund " />
+                <blockquote class="about__quote about__quote--alexandra"><span></span> Alexandra håller reda på alla
+                    överallt och ser till att det flyter</blockquote>
+            </article>
+            <article class="about__person">
                 <h3 class="about__name">Lasse</h3>
                 <img class="about__img" src="../assets/profiles/NoPerson_Square.png" alt="Lasse saknar profilbild" />
-                <blockquote class="about__quote about__quote--lasse"><span></span> Gör övriga saker... mestadels ...</blockquote>
-                </article>
-
-                <article class="about__person">
+                <blockquote class="about__quote about__quote--lasse"><span></span> Gör övriga saker... mestadels ...
+                </blockquote>
+            </article>
+            <article class="about__person">
                 <h3 class="about__name">Sebastian</h3>
                 <img class="about__img" src="../assets/profiles/Sebastian_Square.png" alt="Profilbild på Sebastian" />
-                <blockquote class="about__quote"><span></span> En av våra utbildare som har stor erfarenhet av ganska många saker</blockquote>
-                </article>
-
+                <blockquote class="about__quote"><span></span> En av våra utbildare som har stor erfarenhet av ganska
+                    många saker</blockquote>
+            </article>
             <!-- NEXT SECTION LINK -->
-                <a class="btn-next btn-next--black" href="#contact"><img class="btn-next__icon" src="../assets/arrow-black.png" alt="Tryck för att gå till kontakt"></a>
-            </section>
-
-            <!-- FOOTER / CONTACT SECTION -->
-            <footer id="contact" class="contact">
-                <div class="contact__street">
-                    <span>Tegel Consulting AB</span>
-                    <span>Agatvägen 18</span>
-                    <span>168 60 Bromma</span>
-                </div>
-                <div class="contact__digits">
-                    <span>info at tegelconsulting.se</span>
-                    <span>070-123 456 78</span>
-                </div>
-                <div class="contact__social-media">
-                    <a href="https://instagram.com"><img src="../assets/icons/instagram.png" alt="Instagram logo"/>Instagram</a>
-                    <a href="https://twitter.com"><img src="../assets/icons/twitter.png" alt="Twitter logo"/>Twitter</a>
-                    <a href="https://facebook.com"><img src="../assets/icons/facebook.png" alt="Facebook logo"/>Facebook</a>
-                </div> 
-            </footer>
-        </main>
-    </body>
+            <a class="btn-next btn-next--black" href="#contact"><img class="btn-next__icon"
+                    src="../assets/arrow-black.png" alt="Tryck för att gå till kontakt"></a>
+        </section>
+        <!-- FOOTER / CONTACT SECTION -->
+        <footer id="contact" class="contact">
+            <div class="contact__street">
+                <span>Tegel Consulting AB</span>
+                <span>Agatvägen 18</span>
+                <span>168 60 Bromma</span>
+            </div>
+            <div class="contact__digits">
+                <span>info at tegelconsulting.se</span>
+                <span>070-123 456 78</span>
+            </div>
+            <div class="contact__social-media">
+                <a href="https://instagram.com"><img src="../assets/icons/instagram.png"
+                        alt="Instagram logo" />Instagram</a>
+                <a href="https://twitter.com"><img src="../assets/icons/twitter.png" alt="Twitter logo" />Twitter</a>
+                <a href="https://facebook.com"><img src="../assets/icons/facebook.png"
+                        alt="Facebook logo" />Facebook</a>
+            </div>
+        </footer>
+    </main>
+</body>
 </html>

@@ -1,19 +1,18 @@
 @use "variables" as v;
 @use "mixins" as m;
-
 .hero {
-  @include m.burger;
-  @include m.d-flex--jus(space-between);
   height: 100vh;
   width: 100vw;
   background-image: v.$url_bg;
   background-size: cover;
   background-position: center;
+  @include m.burger;
+  @include m.flexColJus_C(space-between);
   &__content {
-    @include m.d-flex--jus(space-around);
+    @include m.flexColJus_C(space-around);
     height: 35vh;
     padding: 0 20px;
-    color: v.$color_primary;
+    color: v.$colorPrimary;
     text-align: center;
   }
   &__heading {
@@ -24,28 +23,18 @@
     font-size: 1.7em;
   }
   .btn-next {
-    margin-bottom: 5vh;
-    height: 30px;
-    width: 30px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    @include m.btnNext;
     background-image: url(../../assets/arrow-white.png);
   }
 }
 .container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include m.flexColCC;
   width: 100vw;
   .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include m.flexColCC;
     text-align: center;
-    color: v.$color_secondary;
+    color: v.$colorSecondary;
     @include m.desktop {
       flex-direction: row;
       flex-wrap: wrap;
@@ -100,7 +89,7 @@
       }
     }
     .btn-next {
-      margin-bottom: 5vh;
+      @include m.btnNext;
       @include m.desktop {
         width: 100%;
       }
@@ -110,15 +99,13 @@
     } 
   }
   .contact { // FOOTER
-    color: v.$color-primary;
-    background: v.$color_secondary;
+    color: v.$colorPrimary;
+    background: v.$colorSecondary;
     width: 100vw;
     height: 70vh;
     padding: 60px;
     font-size: 1.6em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include m.flexColJusSB;
     @include m.desktop {
       flex-direction: row;
       justify-content: space-around;
@@ -127,8 +114,7 @@
       height: 250px;
     }
     &__street, &__digits, &__social-media { 
-      display: flex;
-      flex-direction: column;
+      @include m.flexCol;
       gap: 13px;
       
     }
