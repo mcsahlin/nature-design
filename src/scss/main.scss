@@ -24,7 +24,7 @@
   }
   .btn-next {
     @include m.btnNext;
-    background-image: url(../../assets/arrow-white.png);
+    background-image: url(../assets/arrow-white.png);
   }
 }
 .container {
@@ -85,7 +85,7 @@
         display: inline-block;
         height: 32px;
         width: 32px;
-        content: url(../../assets/quotation-mark.png);
+        content: url(../assets/quotation-mark.png);
       }
     }
     .btn-next {
