@@ -64,103 +64,106 @@
  padding: 20px;
 }
 @mixin burger {
- .hamburger-menu {
-  height: 7vh;
-  width: 100%;
-  background-color: v.$colorPrimaryTint;
-  display: flex;
-  justify-content: flex-end;
- }
- @include phone {
-  #menu__toggle {
-   opacity: 0;
- }
- #menu__toggle:checked + .menu__btn > span {
-   transform: rotate(45deg);
- }
- #menu__toggle:checked + .menu__btn > span::before {
-   top: 0;
-   transform: rotate(0deg);
- }
- #menu__toggle:checked + .menu__btn > span::after {
-   top: 0;
-   transform: rotate(90deg);
- }
- #menu__toggle:checked ~ .menu__box, #menu__toggle:checked ~ .menu__item {
-   visibility: visible !important;
- }
- .menu__btn {
-   position: absolute;
-   top: 30px;
-   left: 85%;
-   width: 30px;
-   height: 30px;
-   cursor: pointer;
-   z-index: 1;
- }
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  border-radius: 10px;
-  background-color: v.$colorPrimary;
-  transition-duration: .25s;
-}
-.menu__btn > span::before {
-  content: '';
-  top: -8px;
-}
-.menu__btn > span::after {
-  content: '';
-  top: 8px;
-}
-.menu__box {
-  display: block;
-  position: absolute;
-  text-align: center;
-  visibility: hidden;
-  transition: all 0.5;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 20%;
-  margin: 0;
-  padding: 0px;
-  list-style: none;
-  background-color: rgba(238, 233, 233, 0.133);
-}
-.menu__item {
-  position: relative;
-  top: 30px;
-  display: block;
-  padding: 2px;
-  color: v.$colorPrimary;
-  font-size: 20px;
-  font-weight: normal;
-  text-decoration: none;
-}
- }
- @include desktop {
-  input {
-   display: none;
-  }
-  .menu__box {
+  .hamburger-menu {
+   height: 7vh;
+   width:100%;
+   background-color: v.$colorPrimaryTint;
    display: flex;
-   flex-direction: row;
-   font-size: 30px;
-   gap: 15px;
-   margin-right: 50px;
-   align-items: center;
+   justify-content: flex-end;
   }
-  .menu__item {
-   text-decoration: none;
+  @include phone {
+   #menu__toggle {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box, #menu__toggle:checked ~ .menu__item {
+    visibility: visible !important;
+  }
+  .menu__btn {
+    position: absolute;
+    // top: 30px;
+    left: 85%;
+    width: 35px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1;
+    @include flexCC;
+  }
+ .menu__btn > span,
+ .menu__btn > span::before,
+ .menu__btn > span::after {
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 3px;
+   border-radius: 10px;
+   background-color: v.$colorPrimary;
+   transition-duration: .25s;
+ }
+ .menu__btn > span::before {
+   content: '';
+   top: -8px;
+ }
+ .menu__btn > span::after {
+   content: '';
+   top: 8px;
+ }
+ .menu__box {
+   display: block;
+   position: absolute;
+   text-align: center;
+   visibility: hidden;
+   transition: all 0.5;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 20%;
+   margin: 0;
+   padding: 0px;
+   list-style: none;
+   background-color: rgba(238, 233, 233, 0.133);
+ }
+ .menu__item {
+   position: relative;
+   top: 30px;
+   display: block;
+   padding: 2px;
    color: v.$colorPrimary;
-   &:hover {
-    border-bottom: 1px solid v.$colorPrimary;
+   font-size: 20px;
+   font-weight: normal;
+   text-decoration: none;
+ }
+  }
+  @include desktop {
+   input {
+    display: none;
+   }
+   .menu__box {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    gap: 15px;
+    margin-right: 50px;
+    align-items: center;
+   }
+   .menu__item {
+    text-decoration: none;
+    color: v.$colorPrimary;
+    &:hover {
+     border-bottom: 1px solid v.$colorPrimary;
+    }
    }
   }
  }
-}

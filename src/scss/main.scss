@@ -1,8 +1,6 @@
 @use "variables" as v;
 @use "mixins" as m;
-body {
-  width: 100vw;
-}
+
 .hero {
   height: 100vh;
   width: 100%;
@@ -115,7 +113,7 @@ body {
       gap: 50px;
       height: 250px;
     }
-    &__wrapper {
+    &__wrapper { 
       height: 70vh;
       width:max-content;
       padding: 60px 0;
